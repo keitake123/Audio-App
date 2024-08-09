@@ -30,7 +30,7 @@ class LoginController: UIViewController {
             self.headerView.topAnchor.constraint(equalTo: self.view.topAnchor),
             self.headerView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
             self.headerView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-            self.headerView.heightAnchor.constraint(equalToConstant: 270),
+            self.headerView.heightAnchor.constraint(equalToConstant: 270)
     
         ])
     }
