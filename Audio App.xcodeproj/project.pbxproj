@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		AAD29F262C638A4E009236F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F252C638A4E009236F9 /* AppDelegate.swift */; };
 		AAD29F282C638A4E009236F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F272C638A4E009236F9 /* SceneDelegate.swift */; };
-		AAD29F2A2C638A4E009236F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F292C638A4E009236F9 /* ViewController.swift */; };
 		AAD29F2F2C638A4F009236F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAD29F2E2C638A4F009236F9 /* Assets.xcassets */; };
 		AAD29F322C638A4F009236F9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AAD29F312C638A4F009236F9 /* Base */; };
 		AAD29F3B2C63A548009236F9 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F3A2C63A548009236F9 /* ForgotPasswordController.swift */; };
 		AAD29F3D2C63B31F009236F9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F3C2C63B31F009236F9 /* LoginController.swift */; };
 		AAD29F3F2C63B452009236F9 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F3E2C63B452009236F9 /* RegisterController.swift */; };
+		AAD29F412C63BAE5009236F9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F402C63BAE5009236F9 /* HomeController.swift */; };
+		AAD29F452C659552009236F9 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F442C659552009236F9 /* AuthHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AAD29F222C638A4E009236F9 /* Audio App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Audio App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAD29F252C638A4E009236F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AAD29F272C638A4E009236F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AAD29F292C638A4E009236F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AAD29F2E2C638A4F009236F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAD29F312C638A4F009236F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAD29F332C638A4F009236F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD29F3A2C63A548009236F9 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		AAD29F3C2C63B31F009236F9 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		AAD29F3E2C63B452009236F9 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		AAD29F402C63BAE5009236F9 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		AAD29F442C659552009236F9 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,12 +62,13 @@
 		AAD29F242C638A4E009236F9 /* Audio App */ = {
 			isa = PBXGroup;
 			children = (
-				AAD29F292C638A4E009236F9 /* ViewController.swift */,
-				AAD29F392C638CAE009236F9 /* Supporting */,
-				AAD29F332C638A4F009236F9 /* Info.plist */,
+				AAD29F402C63BAE5009236F9 /* HomeController.swift */,
+				AAD29F3E2C63B452009236F9 /* RegisterController.swift */,
 				AAD29F3A2C63A548009236F9 /* ForgotPasswordController.swift */,
 				AAD29F3C2C63B31F009236F9 /* LoginController.swift */,
-				AAD29F3E2C63B452009236F9 /* RegisterController.swift */,
+				AAD29F422C63BBC7009236F9 /* Views */,
+				AAD29F392C638CAE009236F9 /* Supporting */,
+				AAD29F332C638A4F009236F9 /* Info.plist */,
 			);
 			path = "Audio App";
 			sourceTree = "<group>";
@@ -79,6 +82,14 @@
 				AAD29F302C638A4F009236F9 /* LaunchScreen.storyboard */,
 			);
 			path = Supporting;
+			sourceTree = "<group>";
+		};
+		AAD29F422C63BBC7009236F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AAD29F442C659552009236F9 /* AuthHeaderView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,12 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AAD29F2A2C638A4E009236F9 /* ViewController.swift in Sources */,
 				AAD29F3B2C63A548009236F9 /* ForgotPasswordController.swift in Sources */,
+				AAD29F412C63BAE5009236F9 /* HomeController.swift in Sources */,
 				AAD29F3F2C63B452009236F9 /* RegisterController.swift in Sources */,
 				AAD29F262C638A4E009236F9 /* AppDelegate.swift in Sources */,
 				AAD29F282C638A4E009236F9 /* SceneDelegate.swift in Sources */,
 				AAD29F3D2C63B31F009236F9 /* LoginController.swift in Sources */,
+				AAD29F452C659552009236F9 /* AuthHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
