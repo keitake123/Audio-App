@@ -13,9 +13,13 @@
 		AAD29F322C638A4F009236F9 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AAD29F312C638A4F009236F9 /* Base */; };
 		AAD29F3B2C63A548009236F9 /* ForgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F3A2C63A548009236F9 /* ForgotPasswordController.swift */; };
 		AAD29F3D2C63B31F009236F9 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F3C2C63B31F009236F9 /* LoginController.swift */; };
-		AAD29F3F2C63B452009236F9 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F3E2C63B452009236F9 /* RegisterController.swift */; };
 		AAD29F412C63BAE5009236F9 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F402C63BAE5009236F9 /* HomeController.swift */; };
 		AAD29F452C659552009236F9 /* AuthHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F442C659552009236F9 /* AuthHeaderView.swift */; };
+		AAD29F472C6601F5009236F9 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F462C6601F5009236F9 /* CustomTextField.swift */; };
+		AAD29F492C66033C009236F9 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F482C66033C009236F9 /* CustomButton.swift */; };
+		AAD29F4D2C6709ED009236F9 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F4C2C6709ED009236F9 /* RegisterController.swift */; };
+		AAD29F4F2C67767E009236F9 /* WebViewerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F4E2C67767E009236F9 /* WebViewerController.swift */; };
+		AAD29F522C6790EB009236F9 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD29F512C6790EB009236F9 /* AlertManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,9 +31,13 @@
 		AAD29F332C638A4F009236F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAD29F3A2C63A548009236F9 /* ForgotPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordController.swift; sourceTree = "<group>"; };
 		AAD29F3C2C63B31F009236F9 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		AAD29F3E2C63B452009236F9 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		AAD29F402C63BAE5009236F9 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		AAD29F442C659552009236F9 /* AuthHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHeaderView.swift; sourceTree = "<group>"; };
+		AAD29F462C6601F5009236F9 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		AAD29F482C66033C009236F9 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		AAD29F4C2C6709ED009236F9 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		AAD29F4E2C67767E009236F9 /* WebViewerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewerController.swift; sourceTree = "<group>"; };
+		AAD29F512C6790EB009236F9 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,13 +70,12 @@
 		AAD29F242C638A4E009236F9 /* Audio App */ = {
 			isa = PBXGroup;
 			children = (
-				AAD29F402C63BAE5009236F9 /* HomeController.swift */,
-				AAD29F3E2C63B452009236F9 /* RegisterController.swift */,
-				AAD29F3A2C63A548009236F9 /* ForgotPasswordController.swift */,
-				AAD29F3C2C63B31F009236F9 /* LoginController.swift */,
+				AAD29F512C6790EB009236F9 /* AlertManager.swift */,
+				AAD29F502C6790BC009236F9 /* Controller */,
 				AAD29F422C63BBC7009236F9 /* Views */,
 				AAD29F392C638CAE009236F9 /* Supporting */,
 				AAD29F332C638A4F009236F9 /* Info.plist */,
+				AAD29F4E2C67767E009236F9 /* WebViewerController.swift */,
 			);
 			path = "Audio App";
 			sourceTree = "<group>";
@@ -88,8 +95,21 @@
 			isa = PBXGroup;
 			children = (
 				AAD29F442C659552009236F9 /* AuthHeaderView.swift */,
+				AAD29F462C6601F5009236F9 /* CustomTextField.swift */,
+				AAD29F482C66033C009236F9 /* CustomButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		AAD29F502C6790BC009236F9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AAD29F3A2C63A548009236F9 /* ForgotPasswordController.swift */,
+				AAD29F4C2C6709ED009236F9 /* RegisterController.swift */,
+				AAD29F402C63BAE5009236F9 /* HomeController.swift */,
+				AAD29F3C2C63B31F009236F9 /* LoginController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,12 +183,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAD29F3B2C63A548009236F9 /* ForgotPasswordController.swift in Sources */,
+				AAD29F522C6790EB009236F9 /* AlertManager.swift in Sources */,
 				AAD29F412C63BAE5009236F9 /* HomeController.swift in Sources */,
-				AAD29F3F2C63B452009236F9 /* RegisterController.swift in Sources */,
+				AAD29F492C66033C009236F9 /* CustomButton.swift in Sources */,
 				AAD29F262C638A4E009236F9 /* AppDelegate.swift in Sources */,
+				AAD29F472C6601F5009236F9 /* CustomTextField.swift in Sources */,
 				AAD29F282C638A4E009236F9 /* SceneDelegate.swift in Sources */,
 				AAD29F3D2C63B31F009236F9 /* LoginController.swift in Sources */,
 				AAD29F452C659552009236F9 /* AuthHeaderView.swift in Sources */,
+				AAD29F4F2C67767E009236F9 /* WebViewerController.swift in Sources */,
+				AAD29F4D2C6709ED009236F9 /* RegisterController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

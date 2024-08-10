@@ -17,7 +17,7 @@ class AuthHeaderView: UIView {
         return iv
     }()
     
-    private let Titlelabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .label
         label.textAlignment = .center
@@ -26,7 +26,7 @@ class AuthHeaderView: UIView {
         return label
     }()
     
-    private let SubTitlelabel: UILabel = {
+    private let subTitleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .secondaryLabel
         label.textAlignment = .center
@@ -34,12 +34,12 @@ class AuthHeaderView: UIView {
         label.text = "Error"
         return label
     }()
-        
-    // MARK: - Lifecycle
-    init(title: String, subtitle: String){
+    
+    // MARK: - LifeCycle
+    init(title: String, subTitle: String) {
         super.init(frame: .zero)
-        self.Titlelabel.text = title
-        self.SubTitlelabel.text = subtitle
+        self.titleLabel.text = title
+        self.subTitleLabel.text = subTitle
         self.setupUI()
     }
     
@@ -47,22 +47,31 @@ class AuthHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-      // MARK: - UI Setup
+    
+    // MARK: - UI Setup
     private func setupUI() {
         self.addSubview(logoImageView)
-        self.addSubview(Titlelabel)
-        self.addSubview(SubTitlelabel)
+        self.addSubview(titleLabel)
+        self.addSubview(subTitleLabel)
         
         logoImageView.translatesAutoresizingMaskIntoConstraints = false
-        Titlelabel.translatesAutoresizingMaskIntoConstraints = false
-        SubTitlelabel.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        subTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+
+
         NSLayoutConstraint.activate([
-            self.logoImageView.topAnchor.constraint(equalTo: self.layoutMarginsGuide.topAnchor, constant: 16),
+            self.logoImageView.topAnchor.constraint(equalTo: self.topAnchor, constant: 30),
             self.logoImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             self.logoImageView.widthAnchor.constraint(equalToConstant: 90),
             self.logoImageView.heightAnchor.constraint(equalTo: logoImageView.widthAnchor),
+            
+            self.titleLabel.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 19),
+            self.titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            
+            self.subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 12),
+            self.subTitleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            self.subTitleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
         ])
     }
 }
