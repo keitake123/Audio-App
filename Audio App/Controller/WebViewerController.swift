@@ -2,19 +2,19 @@
 //  WebViewerController.swift
 //  Audio App
 //
-//  Created by Keiichi Taketsuna on 2024/08/10.
+//  Created by Keiichi Taketsuna on 2024/08/13.
 //
 
 import UIKit
 import WebKit
 
 class WebViewerController: UIViewController {
-
-    private let webview = WKWebView()
-    private let urlstring: String
     
-    init(with urlstring: String){
-        self.urlstring = urlstring
+    private let webView = WKWebView()
+    private let urlString: String
+    
+    init(with urlString: String) {
+        self.urlString = urlString
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -26,29 +26,32 @@ class WebViewerController: UIViewController {
         super.viewDidLoad()
         self.setupUI()
         
-        guard let url = URL(string: self.urlstring) else{
+        guard let url = URL(string: self.urlString) else {
             self.dismiss(animated: true, completion: nil)
             return
         }
-        self.webview.load(URLRequest(url: url))
+        
+        self.webView.load(URLRequest(url: url))
+        
+        // TODO: - GIT BEFORE CODING
     }
     
     private func setupUI() {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(didTapDone))
         self.navigationController?.navigationBar.backgroundColor = .secondarySystemBackground
-        self.view.addSubview(webview)
-        self.webview.translatesAutoresizingMaskIntoConstraints = false
         
+        self.view.addSubview(webView)
+        self.webView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            self.webview.topAnchor.constraint(equalTo: self.view.topAnchor),
-            self.webview.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
-            self.webview.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
-            self.webview.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
-
+            self.webView.topAnchor.constraint(equalTo: self.view.topAnchor),
+            self.webView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor),
+            self.webView.leadingAnchor.constraint(equalTo: self.view.leadingAnchor),
+            self.webView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
         ])
     }
-    @objc private func didTapDone(){
+    
+    @objc private func didTapDone() {
         self.dismiss(animated: true, completion: nil)
     }
 }
